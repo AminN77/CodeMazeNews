@@ -1,0 +1,15 @@
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\bin\Debug\net5.0\LoggerService.deps.json
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\bin\Debug\net5.0\LoggerService.dll
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\bin\Debug\net5.0\ref\LoggerService.dll
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\bin\Debug\net5.0\LoggerService.pdb
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\bin\Debug\net5.0\Contracts.dll
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\bin\Debug\net5.0\Contracts.pdb
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\obj\Debug\net5.0\LoggerService.csprojAssemblyReference.cache
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\obj\Debug\net5.0\LoggerService.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\obj\Debug\net5.0\LoggerService.AssemblyInfoInputs.cache
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\obj\Debug\net5.0\LoggerService.AssemblyInfo.cs
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\obj\Debug\net5.0\LoggerService.csproj.CoreCompileInputs.cache
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\obj\Debug\net5.0\LoggerService.csproj.CopyComplete
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\obj\Debug\net5.0\LoggerService.dll
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\obj\Debug\net5.0\ref\LoggerService.dll
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\obj\Debug\net5.0\LoggerService.pdb

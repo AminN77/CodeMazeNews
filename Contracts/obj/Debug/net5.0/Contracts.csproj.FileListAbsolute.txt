@@ -1,0 +1,12 @@
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\bin\Debug\net5.0\Contracts.deps.json
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\bin\Debug\net5.0\Contracts.dll
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\bin\Debug\net5.0\ref\Contracts.dll
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\bin\Debug\net5.0\Contracts.pdb
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\obj\Debug\net5.0\Contracts.csprojAssemblyReference.cache
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\obj\Debug\net5.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\obj\Debug\net5.0\Contracts.AssemblyInfoInputs.cache
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\obj\Debug\net5.0\Contracts.AssemblyInfo.cs
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\obj\Debug\net5.0\Contracts.csproj.CoreCompileInputs.cache
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\obj\Debug\net5.0\Contracts.dll
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\obj\Debug\net5.0\ref\Contracts.dll
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\obj\Debug\net5.0\Contracts.pdb

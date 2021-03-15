@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using Repository;
 
 namespace CodeMazeSampleProject.Extensions
 {
@@ -29,5 +30,8 @@ namespace CodeMazeSampleProject.Extensions
             services.AddDbContext<RepositoryContext>(opts =>
                 opts.UseSqlServer(configuration.GetConnectionString("MssqlConnection"), b=>
                     b.MigrationsAssembly("Entities")));
+
+        public static void ConfigureRepositoryManager(this IServiceCollection services) =>
+            services.AddScoped<IRepositoryManager, RepositoryManager>();
     }
 }

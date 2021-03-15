@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Entities.Configuration;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace Entities.Context
 {
@@ -7,6 +9,11 @@ namespace Entities.Context
         public RepositoryContext(DbContextOptions options)
             :base(options)
         {
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new CategoryConfiguration());
         }
 
         public DbSet<User> Users { get; set; }

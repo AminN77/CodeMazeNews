@@ -9,10 +9,11 @@ namespace CodeMazeSampleProject.Controllers
     public class Test : ControllerBase
     {
         private ILoggerManager _logger;
-        
-        public Test(ILoggerManager logger)
+        private readonly IRepositoryManager _repository;
+        public Test(ILoggerManager logger, IRepositoryManager repository)
         {
             _logger = logger;
+            _repository = repository;
         }
         
         [HttpGet]
@@ -22,7 +23,7 @@ namespace CodeMazeSampleProject.Controllers
             _logger.LogError("Error");
             _logger.LogDebug("Debug");
             _logger.LogWarn("Warn");
-            
+
             return Ok();
         }
     }

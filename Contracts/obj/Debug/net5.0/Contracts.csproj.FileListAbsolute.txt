@@ -10,3 +10,6 @@ E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\obj\D
 E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\obj\Debug\net5.0\Contracts.dll
 E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\obj\Debug\net5.0\ref\Contracts.dll
 E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\obj\Debug\net5.0\Contracts.pdb
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\bin\Debug\net5.0\Entities.dll
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\bin\Debug\net5.0\Entities.pdb
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\obj\Debug\net5.0\Contracts.csproj.CopyComplete

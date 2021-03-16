@@ -15,8 +15,6 @@ namespace Entities.Context
         {
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
         }
-
-        public DbSet<User> Users { get; set; }
         public DbSet<News> News { get; set; }
         public DbSet<Category> Categories { get; set; }
     }

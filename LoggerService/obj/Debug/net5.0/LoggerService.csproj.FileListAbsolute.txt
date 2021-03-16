@@ -13,3 +13,5 @@ E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\o
 E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\obj\Debug\net5.0\LoggerService.dll
 E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\obj\Debug\net5.0\ref\LoggerService.dll
 E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\obj\Debug\net5.0\LoggerService.pdb
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\bin\Debug\net5.0\Entities.dll
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\bin\Debug\net5.0\Entities.pdb

@@ -1,0 +1,17 @@
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Repository\bin\Debug\net5.0\Repository.deps.json
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Repository\bin\Debug\net5.0\Repository.dll
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Repository\bin\Debug\net5.0\ref\Repository.dll
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Repository\bin\Debug\net5.0\Repository.pdb
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Repository\bin\Debug\net5.0\Contracts.dll
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Repository\bin\Debug\net5.0\Entities.dll
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Repository\bin\Debug\net5.0\Contracts.pdb
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Repository\bin\Debug\net5.0\Entities.pdb
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Repository\obj\Debug\net5.0\Repository.csprojAssemblyReference.cache
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Repository\obj\Debug\net5.0\Repository.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Repository\obj\Debug\net5.0\Repository.AssemblyInfoInputs.cache
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Repository\obj\Debug\net5.0\Repository.AssemblyInfo.cs
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Repository\obj\Debug\net5.0\Repository.csproj.CoreCompileInputs.cache
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Repository\obj\Debug\net5.0\Repository.csproj.CopyComplete
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Repository\obj\Debug\net5.0\Repository.dll
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Repository\obj\Debug\net5.0\ref\Repository.dll
+E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Repository\obj\Debug\net5.0\Repository.pdb

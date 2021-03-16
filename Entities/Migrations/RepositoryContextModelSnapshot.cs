@@ -55,7 +55,7 @@ namespace Entities.Migrations
                         .HasColumnType("uniqueidentifier")
                         .HasColumnName("NewsId");
 
-                    b.Property<Guid?>("CategoryId")
+                    b.Property<Guid>("CategoryId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
@@ -70,60 +70,25 @@ namespace Entities.Migrations
                         .HasMaxLength(60)
                         .HasColumnType("nvarchar(60)");
 
-                    b.Property<Guid?>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
 
-                    b.HasIndex("UserId");
-
                     b.ToTable("News");
-                });
-
-            modelBuilder.Entity("Entities.User", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier")
-                        .HasColumnName("UserId");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasMaxLength(60)
-                        .HasColumnType("nvarchar(60)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("Entities.News", b =>
                 {
                     b.HasOne("Entities.Category", "Category")
                         .WithMany("News")
-                        .HasForeignKey("CategoryId");
-
-                    b.HasOne("Entities.User", "User")
-                        .WithMany("News")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Category");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Entities.Category", b =>
-                {
-                    b.Navigation("News");
-                });
-
-            modelBuilder.Entity("Entities.User", b =>
                 {
                     b.Navigation("News");
                 });

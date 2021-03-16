@@ -15,11 +15,10 @@ namespace Entities
         
         [Required(ErrorMessage = "Description is a required field.")]
         public string Description { get; set; }
-        
         public string ImageUrl { get; set; }
-        
-        public virtual User User { get; set; }
-        
+
+        [ForeignKey(nameof(Category))]
+        public Guid CategoryId { get; set; }
         public virtual Category Category { get; set; }
     }
 }

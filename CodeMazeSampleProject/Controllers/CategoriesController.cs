@@ -1,5 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using AutoMapper;
 using Contracts;
+using Entities;
+using Entities.DataTransferObjects;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CodeMazeSampleProject.Controllers
@@ -10,11 +15,13 @@ namespace CodeMazeSampleProject.Controllers
     {
         private readonly IRepositoryManager _repository;
         private readonly ILoggerManager _logger;
+        private readonly IMapper _mapper;
 
-        public CategoriesController(ILoggerManager logger, IRepositoryManager repository)
+        public CategoriesController(ILoggerManager logger, IRepositoryManager repository, IMapper mapper)
         {
             _logger = logger;
             _repository = repository;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -23,7 +30,8 @@ namespace CodeMazeSampleProject.Controllers
             try
             {
                 var categories = _repository.Category.GetAllCategories(trackChanges: false);
-                return Ok(categories);
+                var categoriesDto = _mapper.Map<IEnumerable<CategoryDto>>(categories);
+                return Ok(categoriesDto);
             }
             catch (Exception exception)
             {

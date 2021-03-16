@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "2uLKYekm7gE/fISVXIM7hjRNVLn9nDlagOudsYsn3LF3G4PgcHrWyhEbR8ea4YdiPHSIuvZMHKua2yBtEtOOhA==",
+  "dgSpecHash": "2D/F5O7oDinjbmpCxrh8vJJXaTrXo4GmKKyp9al1B+u00Vd7TeWTn38tKaXVsv3wWKGVTTMkWB5/I8u7F6q20g==",
   "success": true,
   "projectFilePath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\CodeMazeSampleProject\\CodeMazeSampleProject.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Amin N\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\Amin N\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.1\\microsoft.data.sqlclient.2.1.1.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.0-preview.2.21154.2\\microsoft.entityframeworkcore.6.0.0-preview.2.21154.2.nupkg.sha512",
@@ -46,6 +48,7 @@
     "C:\\Users\\Amin N\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0-preview.2.21154.6\\system.diagnostics.diagnosticsource.6.0.0-preview.2.21154.6.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.8.0\\system.identitymodel.tokens.jwt.6.8.0.nupkg.sha512",
+    "C:\\Users\\Amin N\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\system.runtime.caching\\4.7.0\\system.runtime.caching.4.7.0.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0-preview.2.21154.6\\system.runtime.compilerservices.unsafe.6.0.0-preview.2.21154.6.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",

@@ -27,17 +27,9 @@ namespace CodeMazeSampleProject.Controllers
         [HttpGet]
         public IActionResult GetCategories()
         {
-            try
-            {
-                var categories = _repository.Category.GetAllCategories(trackChanges: false);
-                var categoriesDto = _mapper.Map<IEnumerable<CategoryDto>>(categories);
-                return Ok(categoriesDto);
-            }
-            catch (Exception exception)
-            {
-                _logger.LogError($"Something went wrong in the {nameof(GetCategories)} action {exception}");
-            return StatusCode(500, "Internal server error");
-            }
+            var categories = _repository.Category.GetAllCategories(trackChanges: false);
+            var categoriesDto = _mapper.Map<IEnumerable<CategoryDto>>(categories);
+            return Ok(categoriesDto);
         }
     }
 }

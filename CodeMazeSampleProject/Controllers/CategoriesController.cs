@@ -31,5 +31,19 @@ namespace CodeMazeSampleProject.Controllers
             var categoriesDto = _mapper.Map<IEnumerable<CategoryDto>>(categories);
             return Ok(categoriesDto);
         }
+
+        [HttpGet("{id}")]
+        public IActionResult GetCategory(Guid id)
+        {
+            var category = _repository.Category.GetCategory(id, trackChanges: false);
+            if (category is null)
+            {
+              _logger.LogInfo($"Category with id:{id} doesn't exist in the database");
+              return NotFound();
+            }
+            
+            var categoryDto = _mapper.Map<CategoryDto>(category);
+            return Ok(categoryDto);
+        }
     }
 }

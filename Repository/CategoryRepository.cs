@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Contracts;
 using Entities;
@@ -17,5 +18,10 @@ namespace Repository
             FindAll(trackChanges)
                 .OrderBy(c => c.Title)
                 .ToList();
+
+        public Category GetCategory(Guid categoryId, bool trackChanges) =>
+            FindByCondition(c => c.Id.Equals(categoryId), trackChanges)
+                .SingleOrDefault();
+
     }
 }

@@ -9,6 +9,7 @@ namespace CodeMazeSampleProject
         public MappingProfile()
         {
             CreateMap<Category, CategoryDto>();
+            CreateMap<News, NewsDto>();
         }
     }
 }

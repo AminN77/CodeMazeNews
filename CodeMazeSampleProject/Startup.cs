@@ -39,7 +39,12 @@ namespace CodeMazeSampleProject
             services.ConfigureSqlContext(Configuration);
             services.ConfigureCors();
             services.ConfigureLoggerService();
-            services.AddControllers();
+            services.AddControllers(config =>
+                {
+                    config.RespectBrowserAcceptHeader = true;
+                    config.ReturnHttpNotAcceptable = true;
+                }).AddXmlSerializerFormatters()
+                .AddCustomCsvFormatter();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CodeMazeSampleProject", Version = "v1" });

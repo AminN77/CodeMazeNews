@@ -23,5 +23,10 @@ namespace Repository
             FindByCondition(c => c.Id.Equals(categoryId), trackChanges)
                 .SingleOrDefault();
 
+        public void CreateCategory(Category category) => Create(category);
+
+        public IEnumerable<Category> GetByIds(IEnumerable<Guid> ids, bool trackChanges) =>
+            FindByCondition(x => ids.Contains(x.Id), trackChanges)
+                .ToList();
     }
 }

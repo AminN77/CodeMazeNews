@@ -22,5 +22,10 @@ namespace Repository
             FindByCondition(n => n.CategoryId.Equals(categoryId) && n.Id.Equals(id), trackChanges)
                 .SingleOrDefault();
 
+        public void CreateNewsForCategory(Guid categoryId, News news)
+        {
+            news.CategoryId = categoryId;
+            Create(news);
+        }
     }
 }

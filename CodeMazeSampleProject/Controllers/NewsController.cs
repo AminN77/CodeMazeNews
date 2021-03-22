@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using AutoMapper;
 using Contracts;
+using Entities;
 using Entities.DataTransferObjects;
 using Microsoft.AspNetCore.Mvc;
 
@@ -37,7 +38,7 @@ namespace CodeMazeSampleProject.Controllers
             return Ok(newsDto);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "GetNewsForCategory")]
         public IActionResult GetNewsForCategory(Guid categoryId, Guid id)
         {
             var category = _repository.Category.GetCategory(categoryId, trackChanges: false);
@@ -56,6 +57,30 @@ namespace CodeMazeSampleProject.Controllers
 
             var news = _mapper.Map<NewsDto>(newsFromDb);
             return Ok(news);
+        }
+
+        [HttpPost]
+        public IActionResult CreateNewsForCategory(Guid categoryId, [FromBody] NewsForCreationDto newsForCreationDto)
+        {
+            if (newsForCreationDto is null)
+            {
+                _logger.LogError("newsForCreationDto object sent from client is null");
+                return BadRequest("newsForCreationDto object is null");
+            }
+
+            var category = _repository.Category.GetCategory(categoryId, trackChanges: false);
+            if (category is null)
+            {
+                _logger.LogInfo($"Category with id:{categoryId} doesn't exist in the database");
+                return NotFound();
+            }
+
+            var news = _mapper.Map<News>(newsForCreationDto);
+            _repository.News.CreateNewsForCategory(categoryId, news);
+            _repository.Save();
+
+            var newsToReturn = _mapper.Map<NewsDto>(news);
+            return CreatedAtRoute("GetNewsForCategory", new {categoryId, id = newsToReturn}, newsToReturn);
         }
     }
 }

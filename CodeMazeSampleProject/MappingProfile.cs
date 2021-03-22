@@ -10,6 +10,8 @@ namespace CodeMazeSampleProject
         {
             CreateMap<Category, CategoryDto>();
             CreateMap<News, NewsDto>();
+            CreateMap<CategoryForCreationDto, Category>();
+            CreateMap<NewsForCreationDto, News>();
         }
     }
 }

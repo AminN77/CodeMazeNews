@@ -105,5 +105,21 @@ namespace CodeMazeSampleProject.Controllers
             var ids = string.Join(",", categoryCollectionToReturn.Select(c => c.Id));
             return CreatedAtRoute("CategoryCollection", new {ids}, categoryCollectionToReturn);
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteCategory(Guid id)
+        {
+            var category = _repository.Category.GetCategory(id, trackChanges: false);
+            if(category == null)
+            {
+                _logger.LogInfo($"Category with id: {id} doesn't exist in the database.");
+                return NotFound();
+            }
+            
+            _repository.Category.DeleteCategory(category);
+            _repository.Save();
+            return NoContent();
+
+        }
     }
 }

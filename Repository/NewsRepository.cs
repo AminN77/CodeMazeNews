@@ -27,5 +27,10 @@ namespace Repository
             news.CategoryId = categoryId;
             Create(news);
         }
+
+        public void DeleteNews(News news)
+        {
+            Delete(news);
+        }
     }
 }

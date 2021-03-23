@@ -82,5 +82,27 @@ namespace CodeMazeSampleProject.Controllers
             var newsToReturn = _mapper.Map<NewsDto>(news);
             return CreatedAtRoute("GetNewsForCategory", new {categoryId, id = newsToReturn}, newsToReturn);
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteNewsForCategory(Guid categoryId, Guid id)
+        {
+            var category = _repository.Category.GetCategory(categoryId, trackChanges: false);
+            if (category is null)
+            {
+                _logger.LogInfo($"Category with id:{categoryId} doesn't exist in the database");
+                return NotFound();
+            }
+
+            var newsForCategory = _repository.News.GetNews(categoryId, id, trackChanges: false);
+            if (newsForCategory is null)
+            {
+                _logger.LogError($"News with id:{id} doesn't exist in the database");
+                return NotFound();
+            }
+            
+            _repository.News.DeleteNews(newsForCategory);
+            _repository.Save();
+            return NoContent();
+        }
     }
 }

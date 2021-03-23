@@ -28,5 +28,10 @@ namespace Repository
         public IEnumerable<Category> GetByIds(IEnumerable<Guid> ids, bool trackChanges) =>
             FindByCondition(x => ids.Contains(x.Id), trackChanges)
                 .ToList();
+
+        public void DeleteCategory(Category category)
+        {
+            Delete(category);
+        }
     }
 }

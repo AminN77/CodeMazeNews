@@ -104,5 +104,34 @@ namespace CodeMazeSampleProject.Controllers
             _repository.Save();
             return NoContent();
         }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateNewsForCategory(Guid categoryId, Guid id,
+            [FromBody] NewsForUpdateDto newsForUpdateDto)
+        {
+            if (newsForUpdateDto is null)
+            {
+                _logger.LogError("NewsForUpdateDto object sent from client is null");
+                return BadRequest("NewsForUpdateDto object sent from client is null");
+            }
+
+            var category = _repository.Category.GetCategory(categoryId, trackChanges: false);
+            if (category is null)
+            {
+                _logger.LogInfo($"Category with id:{categoryId} doesn't exist in database");
+                return NotFound();
+            }
+
+            var news = _repository.News.GetNews(categoryId, id, trackChanges: true);
+            if (news is null)
+            {
+                _logger.LogInfo($"News with id: {id} doesn't exist in the database");
+                return NotFound();
+            }
+
+            _mapper.Map(newsForUpdateDto, news);
+            _repository.Save();
+            return NoContent();
+        }
     }
 }

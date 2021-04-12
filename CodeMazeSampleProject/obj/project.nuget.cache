@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DHjzsnPi47vP99dc2I4ufL4+Cdi+LBDuXTKZ7BOAYhrMDcF4g/hn3TyaeQBF1TVthb4qUYW6s6ALj0WvOvr9+Q==",
+  "dgSpecHash": "V2qAR6wdWxa7QNfFa+JoTxYZ+EQLURGN1nPnbH8mjUauN9VlqZbSgONR7fmf81qxuEand7b25WOF0WriiQlk6g==",
   "success": true,
-  "projectFilePath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\CodeMazeSampleProject\\CodeMazeSampleProject.csproj",
+  "projectFilePath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\CodeMazeSampleProject\\CodeMazeSampleProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Amin N\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\CodeMazeSampleProject\\CodeMazeSampleProject.csproj": {}
+    "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\CodeMazeSampleProject\\CodeMazeSampleProject.csproj": {}
   },
   "projects": {
-    "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\CodeMazeSampleProject\\CodeMazeSampleProject.csproj": {
+    "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\CodeMazeSampleProject\\CodeMazeSampleProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\CodeMazeSampleProject\\CodeMazeSampleProject.csproj",
+        "projectUniqueName": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\CodeMazeSampleProject\\CodeMazeSampleProject.csproj",
         "projectName": "CodeMazeSampleProject",
-        "projectPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\CodeMazeSampleProject\\CodeMazeSampleProject.csproj",
+        "projectPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\CodeMazeSampleProject\\CodeMazeSampleProject.csproj",
         "packagesPath": "C:\\Users\\Amin N\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\CodeMazeSampleProject\\obj\\",
+        "outputPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\CodeMazeSampleProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Amin N\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\LoggerService\\LoggerService.csproj": {
-                "projectPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\LoggerService\\LoggerService.csproj"
+              "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\LoggerService\\LoggerService.csproj": {
+                "projectPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\LoggerService\\LoggerService.csproj"
               },
-              "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Repository\\Repository.csproj": {
-                "projectPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Repository\\Repository.csproj"
+              "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Repository\\Repository.csproj": {
+                "projectPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Repository\\Repository.csproj"
               }
             }
           }
@@ -88,14 +88,14 @@
         }
       }
     },
-    "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Contracts\\Contracts.csproj": {
+    "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Contracts\\Contracts.csproj",
+        "projectPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Contracts\\Contracts.csproj",
         "packagesPath": "C:\\Users\\Amin N\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Contracts\\obj\\",
+        "outputPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Amin N\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -112,8 +112,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Entities\\Entities.csproj": {
-                "projectPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Entities\\Entities.csproj"
+              "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Entities\\Entities.csproj"
               }
             }
           }
@@ -146,14 +146,14 @@
         }
       }
     },
-    "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Entities\\Entities.csproj": {
+    "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Entities\\Entities.csproj",
+        "projectUniqueName": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Entities\\Entities.csproj",
+        "projectPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\Amin N\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Entities\\obj\\",
+        "outputPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Amin N\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -226,14 +226,14 @@
         }
       }
     },
-    "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\LoggerService\\LoggerService.csproj": {
+    "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\LoggerService\\LoggerService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\LoggerService\\LoggerService.csproj",
+        "projectUniqueName": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\LoggerService\\LoggerService.csproj",
         "projectName": "LoggerService",
-        "projectPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\LoggerService\\LoggerService.csproj",
+        "projectPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\LoggerService\\LoggerService.csproj",
         "packagesPath": "C:\\Users\\Amin N\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\LoggerService\\obj\\",
+        "outputPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\LoggerService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Amin N\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -250,8 +250,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Contracts\\Contracts.csproj": {
-                "projectPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Contracts\\Contracts.csproj"
+              "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Contracts\\Contracts.csproj": {
+                "projectPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Contracts\\Contracts.csproj"
               }
             }
           }
@@ -290,14 +290,14 @@
         }
       }
     },
-    "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Repository\\Repository.csproj": {
+    "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Repository\\Repository.csproj",
+        "projectUniqueName": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Repository\\Repository.csproj",
+        "projectPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\Amin N\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Repository\\obj\\",
+        "outputPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Amin N\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -314,11 +314,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Contracts\\Contracts.csproj": {
-                "projectPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Contracts\\Contracts.csproj"
+              "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Contracts\\Contracts.csproj": {
+                "projectPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Contracts\\Contracts.csproj"
               },
-              "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Entities\\Entities.csproj": {
-                "projectPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Entities\\Entities.csproj"
+              "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Entities\\Entities.csproj"
               }
             }
           }

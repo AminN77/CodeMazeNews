@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gk6uqFfscnD9mQb5Bq2FQtXxy86Vt/YWUBOcpq++HumCnrIUbKKW4iPS/+pxwgIbWSg37+fU7M2A0vkEnxWagg==",
+  "dgSpecHash": "gDSritgOkvimixeyvHWbh/syQ+p1rhoL5oWluJf2ldQT/IKrNPR9xhTCFQ12TKal394DA1wNGuBd4ubiyvV82A==",
   "success": true,
-  "projectFilePath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\LoggerService\\LoggerService.csproj",
+  "projectFilePath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\LoggerService\\LoggerService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.1\\microsoft.data.sqlclient.2.1.1.nupkg.sha512",

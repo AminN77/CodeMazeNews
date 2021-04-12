@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ucOn3ml7detGMRzxDylJzIG1l8NHMZLXg5zorp4UD6X9CWP0K3hPQhsu2nJKskbbQfc0EJXrl+VV0PNWI8VODg==",
+  "dgSpecHash": "g1PHXB0MXQ3rMmBFhlmqw1SYSU6ej7+6NAT+9QZYY90AywB89pSoVJ5KDTW2OzhPPx3GbVUAFoQ+MaCm/brr0Q==",
   "success": true,
-  "projectFilePath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Repository\\Repository.csproj",
+  "projectFilePath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Repository\\Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.1\\microsoft.data.sqlclient.2.1.1.nupkg.sha512",

@@ -4394,11 +4394,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Repository\\Repository.csproj",
+      "projectUniqueName": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Repository\\Repository.csproj",
       "projectName": "Repository",
-      "projectPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Repository\\Repository.csproj",
+      "projectPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Repository\\Repository.csproj",
       "packagesPath": "C:\\Users\\Amin N\\.nuget\\packages\\",
-      "outputPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Repository\\obj\\",
+      "outputPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Repository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Amin N\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4415,11 +4415,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Contracts\\Contracts.csproj": {
-              "projectPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Contracts\\Contracts.csproj"
+            "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Contracts\\Contracts.csproj": {
+              "projectPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Contracts\\Contracts.csproj"
             },
-            "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Entities\\Entities.csproj": {
-              "projectPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Entities\\Entities.csproj"
+            "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Entities\\Entities.csproj": {
+              "projectPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Entities\\Entities.csproj"
             }
           }
         }

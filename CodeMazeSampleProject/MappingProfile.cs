@@ -12,6 +12,8 @@ namespace CodeMazeSampleProject
             CreateMap<News, NewsDto>();
             CreateMap<CategoryForCreationDto, Category>();
             CreateMap<NewsForCreationDto, News>();
+            CreateMap<NewsForUpdateDto, News>();
+            CreateMap<CategoryForUpdateDto, Category>();
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Entities\\Entities.csproj": {}
+    "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Entities\\Entities.csproj": {
+    "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Entities\\Entities.csproj",
+        "projectUniqueName": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Entities\\Entities.csproj",
+        "projectPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\Amin N\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Entities\\obj\\",
+        "outputPath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Amin N\\AppData\\Roaming\\NuGet\\NuGet.Config",

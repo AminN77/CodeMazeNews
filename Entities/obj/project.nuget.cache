@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jvx/gshX34XMQ5gh/bFA+ZI6g+H6CtEj1n21vrDWl8CQsivoRqnVTdRPTVaM470khnU2+2LhxYhAbWP0KwDbiw==",
+  "dgSpecHash": "1Xj3qquNIlTNIzEt9Fbym3V00musBP6R5o4+EVJ3mRhG56ZqykKRGIGhVYgyMeIR3jBFn9+v8V4ovdlVA8pO+A==",
   "success": true,
-  "projectFilePath": "E:\\Projects\\Web\\BackEnd\\Asp.Net core\\Tests\\CodeMazeSampleProject\\Entities\\Entities.csproj",
+  "projectFilePath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Amin N\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

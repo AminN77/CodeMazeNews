@@ -4,6 +4,7 @@ using AutoMapper;
 using Contracts;
 using Entities;
 using Entities.DataTransferObjects;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CodeMazeSampleProject.Controllers
@@ -130,6 +131,37 @@ namespace CodeMazeSampleProject.Controllers
             }
 
             _mapper.Map(newsForUpdateDto, news);
+            _repository.Save();
+            return NoContent();
+        }
+
+        [HttpPatch("{id}")]
+        public IActionResult PartiallyUpdateNewsForCategory(Guid categoryId, Guid id,
+            [FromBody] JsonPatchDocument<NewsForUpdateDto> patchDocument)
+        {
+            if (patchDocument is null)
+            {
+                _logger.LogError("patchDocument object sent from client is null");
+                return BadRequest("patchDocument object is null");
+            }
+
+            var category = _repository.Category.GetCategory(categoryId, trackChanges: false);
+            if (category is null)
+            {
+                _logger.LogInfo($"Category with id:{categoryId} doesn't exist in the database");
+                return NotFound();
+            }
+
+            var news = _repository.News.GetNews(categoryId, id, trackChanges: true);
+            if (news is null)
+            {
+                _logger.LogInfo($"News with id:{id} doesn't exist in the database");
+                return NotFound();
+            }
+
+            var newsToPatch = _mapper.Map<NewsForUpdateDto>(news);
+            patchDocument.ApplyTo(newsToPatch);
+            _mapper.Map(newsToPatch, news);
             _repository.Save();
             return NoContent();
         }

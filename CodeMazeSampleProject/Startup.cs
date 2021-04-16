@@ -43,7 +43,8 @@ namespace CodeMazeSampleProject
                 {
                     config.RespectBrowserAcceptHeader = true;
                     config.ReturnHttpNotAcceptable = true;
-                }).AddXmlSerializerFormatters()
+                }).AddNewtonsoftJson()
+                .AddXmlSerializerFormatters()
                 .AddCustomCsvFormatter();
             services.AddSwaggerGen(c =>
             {

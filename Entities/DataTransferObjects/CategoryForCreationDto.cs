@@ -1,11 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Entities.DataTransferObjects
 {
-    public class CategoryForCreationDto
+    public class CategoryForCreationDto : CategoryForManipulationDto
     {
-        public string Title { get; set; }
-
-        public IEnumerable<News> News { get; set; }
     }
 }

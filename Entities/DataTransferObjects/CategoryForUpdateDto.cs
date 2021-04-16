@@ -2,10 +2,7 @@
 
 namespace Entities.DataTransferObjects
 {
-    public class CategoryForUpdateDto
+    public class CategoryForUpdateDto : CategoryForManipulationDto
     {
-        public string Title { get; set; }
-
-        public IEnumerable<News> News { get; set; }
     }
 }

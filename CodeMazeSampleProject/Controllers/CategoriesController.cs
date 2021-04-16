@@ -55,6 +55,12 @@ namespace CodeMazeSampleProject.Controllers
                 _logger.LogError("categoryForCreationDto object sent from client is null");
                 return BadRequest("CategoryForCreation object is null");
             }
+            
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError("Invalid model state for the CategoryForCreationDto object");
+                return UnprocessableEntity(ModelState);
+            }
 
             var category = _mapper.Map<Category>(categoryForCreationDto);
             _repository.Category.CreateCategory(category);
@@ -129,6 +135,12 @@ namespace CodeMazeSampleProject.Controllers
             {
                 _logger.LogError("CategoryForUpdateDto object sent from client is null");
                 return BadRequest("CategoryForUpdateDto object sent from client is null");
+            }
+            
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError("Invalid model state for the CategoryForUpdateDto object");
+                return UnprocessableEntity(ModelState);
             }
 
             var category = _repository.Category.GetCategory(id, trackChanges: true);

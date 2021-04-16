@@ -69,6 +69,12 @@ namespace CodeMazeSampleProject.Controllers
                 return BadRequest("newsForCreationDto object is null");
             }
 
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError("Invalid model state for the NewsForCreationDto object");
+                return UnprocessableEntity(ModelState);
+            }
+
             var category = _repository.Category.GetCategory(categoryId, trackChanges: false);
             if (category is null)
             {
@@ -115,6 +121,12 @@ namespace CodeMazeSampleProject.Controllers
                 _logger.LogError("NewsForUpdateDto object sent from client is null");
                 return BadRequest("NewsForUpdateDto object sent from client is null");
             }
+            
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError("Invalid model state for the NewsForUpdateDto object");
+                return UnprocessableEntity(ModelState);
+            }
 
             var category = _repository.Category.GetCategory(categoryId, trackChanges: false);
             if (category is null)
@@ -160,7 +172,14 @@ namespace CodeMazeSampleProject.Controllers
             }
 
             var newsToPatch = _mapper.Map<NewsForUpdateDto>(news);
-            patchDocument.ApplyTo(newsToPatch);
+            patchDocument.ApplyTo(newsToPatch, ModelState);
+            TryValidateModel(newsToPatch);
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError("Invalid model state for the patch document");
+                return UnprocessableEntity(ModelState);
+            }
+            
             _mapper.Map(newsToPatch, news);
             _repository.Save();
             return NoContent();

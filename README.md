@@ -4,3 +4,4 @@ a simple ASP.NET core WebAPI application using :
 ### Repository Pattern
 ### RESTFul APIs
 ### Additional content negotiations (XML, CSV)
+### Validation

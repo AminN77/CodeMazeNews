@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using AutoMapper;
 using CodeMazeSampleProject.ModelBinders;
 using Contracts;
@@ -26,17 +27,17 @@ namespace CodeMazeSampleProject.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetCategories()
+        public async Task<IActionResult> GetCategories()
         {
-            var categories = _repository.Category.GetAllCategories(trackChanges: false);
+            var categories = await _repository.Category.GetAllCategoriesAsync(trackChanges: false);
             var categoriesDto = _mapper.Map<IEnumerable<CategoryDto>>(categories);
             return Ok(categoriesDto);
         }
 
         [HttpGet("{id}", Name = "CategoryById")]
-        public IActionResult GetCategory(Guid id)
+        public async Task<IActionResult> GetCategory(Guid id)
         {
-            var category = _repository.Category.GetCategory(id, trackChanges: false);
+            var category = await _repository.Category.GetCategoryAsync(id, trackChanges: false);
             if (category is null)
             {
               _logger.LogInfo($"Category with id:{id} doesn't exist in the database");
@@ -48,7 +49,7 @@ namespace CodeMazeSampleProject.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateCategory([FromBody] CategoryForCreationDto categoryForCreationDto)
+        public async Task<IActionResult> CreateCategory([FromBody] CategoryForCreationDto categoryForCreationDto)
         {
             if (categoryForCreationDto is null)
             {
@@ -64,14 +65,14 @@ namespace CodeMazeSampleProject.Controllers
 
             var category = _mapper.Map<Category>(categoryForCreationDto);
             _repository.Category.CreateCategory(category);
-            _repository.Save();
+            await _repository.SaveAsync();
             
             var categoryToReturn = _mapper.Map<CategoryDto>(category);
             return CreatedAtRoute("CategoryById", new {id = categoryToReturn.Id}, categoryToReturn);
         }
 
         [HttpGet("collection/({ids})", Name = "CategoryCollection")]
-        public IActionResult GetCategoryCollection([ModelBinder(BinderType = typeof(ArrayModelBinder))] IEnumerable<Guid> ids)
+        public async Task<IActionResult> GetCategoryCollection([ModelBinder(BinderType = typeof(ArrayModelBinder))] IEnumerable<Guid> ids)
         {
             if (ids is null)
             {
@@ -79,7 +80,7 @@ namespace CodeMazeSampleProject.Controllers
                 return BadRequest("Parameter ids is null");
             }
 
-            var categories = _repository.Category.GetByIds(ids, trackChanges: false);
+            var categories = await _repository.Category.GetByIdsAsync(ids, trackChanges: false);
             if (ids.Count() != categories.Count())
             {
                 _logger.LogError("Some ids are not valid in a collection");
@@ -91,7 +92,7 @@ namespace CodeMazeSampleProject.Controllers
         }
 
         [HttpPost("collection")]
-        public IActionResult CreateCategoryCollection([FromBody] IEnumerable<CategoryForCreationDto> categoryCollection)
+        public async Task<IActionResult> CreateCategoryCollection([FromBody] IEnumerable<CategoryForCreationDto> categoryCollection)
         {
             if (categoryCollection is null)
             {
@@ -105,7 +106,7 @@ namespace CodeMazeSampleProject.Controllers
                 _repository.Category.CreateCategory(category);
             }
             
-            _repository.Save();
+            await _repository.SaveAsync();
 
             var categoryCollectionToReturn = _mapper.Map<IEnumerable<CategoryDto>>(categories);
             var ids = string.Join(",", categoryCollectionToReturn.Select(c => c.Id));
@@ -113,9 +114,9 @@ namespace CodeMazeSampleProject.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteCategory(Guid id)
+        public async Task<IActionResult> DeleteCategory(Guid id)
         {
-            var category = _repository.Category.GetCategory(id, trackChanges: false);
+            var category = await _repository.Category.GetCategoryAsync(id, trackChanges: false);
             if(category == null)
             {
                 _logger.LogInfo($"Category with id: {id} doesn't exist in the database.");
@@ -123,13 +124,13 @@ namespace CodeMazeSampleProject.Controllers
             }
             
             _repository.Category.DeleteCategory(category);
-            _repository.Save();
+            await _repository.SaveAsync();
             return NoContent();
 
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateCategory(Guid id, [FromBody] CategoryForUpdateDto categoryForUpdateDto)
+        public async Task<IActionResult> UpdateCategory(Guid id, [FromBody] CategoryForUpdateDto categoryForUpdateDto)
         {
             if (categoryForUpdateDto is null)
             {
@@ -143,7 +144,7 @@ namespace CodeMazeSampleProject.Controllers
                 return UnprocessableEntity(ModelState);
             }
 
-            var category = _repository.Category.GetCategory(id, trackChanges: true);
+            var category = await _repository.Category.GetCategoryAsync(id, trackChanges: true);
             if (category is null)
             {
                 _logger.LogError($"Category with id:{id} doesn't exist in the database");
@@ -151,7 +152,7 @@ namespace CodeMazeSampleProject.Controllers
             }
 
             _mapper.Map(categoryForUpdateDto, category);
-            _repository.Save();
+            await _repository.SaveAsync();
             return NoContent();
         }
     }

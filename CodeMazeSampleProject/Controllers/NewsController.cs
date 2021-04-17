@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using AutoMapper;
 using Contracts;
 using Entities;
@@ -25,31 +26,31 @@ namespace CodeMazeSampleProject.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetNewsForCategory(Guid categoryId)
+        public async Task<IActionResult> GetNewsForCategory(Guid categoryId)
         {
-            var category = _repository.Category.GetCategory(categoryId, trackChanges: false);
+            var category = await _repository.Category.GetCategoryAsync(categoryId, trackChanges: false);
             if (category is null)
             {
                 _logger.LogInfo($"Category with id:{categoryId} doesn't exist in the database");
                 return NotFound();
             }
 
-            var newsFromDb = _repository.News.GetNews(categoryId, trackChanges: false);
+            var newsFromDb = await _repository.News.GetNewsAsync(categoryId, trackChanges: false);
             var newsDto = _mapper.Map<IEnumerable<NewsDto>>(newsFromDb);
             return Ok(newsDto);
         }
 
         [HttpGet("{id}", Name = "GetNewsForCategory")]
-        public IActionResult GetNewsForCategory(Guid categoryId, Guid id)
+        public async Task<IActionResult> GetNewsForCategory(Guid categoryId, Guid id)
         {
-            var category = _repository.Category.GetCategory(categoryId, trackChanges: false);
+            var category = await _repository.Category.GetCategoryAsync(categoryId, trackChanges: false);
             if (category is null)
             {
                 _logger.LogInfo($"Category with id:{categoryId} doesn't exist in the database");
                 return NotFound();
             }
 
-            var newsFromDb = _repository.News.GetNews(categoryId, id, trackChanges: false);
+            var newsFromDb = await _repository.News.GetNewsAsync(categoryId, id, trackChanges: false);
             if (newsFromDb is null)
             {
                 _logger.LogInfo($"News with id:{id} doesn't exist in the database");
@@ -61,7 +62,7 @@ namespace CodeMazeSampleProject.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateNewsForCategory(Guid categoryId, [FromBody] NewsForCreationDto newsForCreationDto)
+        public async Task<IActionResult> CreateNewsForCategory(Guid categoryId, [FromBody] NewsForCreationDto newsForCreationDto)
         {
             if (newsForCreationDto is null)
             {
@@ -75,7 +76,7 @@ namespace CodeMazeSampleProject.Controllers
                 return UnprocessableEntity(ModelState);
             }
 
-            var category = _repository.Category.GetCategory(categoryId, trackChanges: false);
+            var category = await _repository.Category.GetCategoryAsync(categoryId, trackChanges: false);
             if (category is null)
             {
                 _logger.LogInfo($"Category with id:{categoryId} doesn't exist in the database");
@@ -84,23 +85,23 @@ namespace CodeMazeSampleProject.Controllers
 
             var news = _mapper.Map<News>(newsForCreationDto);
             _repository.News.CreateNewsForCategory(categoryId, news);
-            _repository.Save();
+            await _repository.SaveAsync();
 
             var newsToReturn = _mapper.Map<NewsDto>(news);
             return CreatedAtRoute("GetNewsForCategory", new {categoryId, id = newsToReturn}, newsToReturn);
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteNewsForCategory(Guid categoryId, Guid id)
+        public async Task<IActionResult> DeleteNewsForCategory(Guid categoryId, Guid id)
         {
-            var category = _repository.Category.GetCategory(categoryId, trackChanges: false);
+            var category = await _repository.Category.GetCategoryAsync(categoryId, trackChanges: false);
             if (category is null)
             {
                 _logger.LogInfo($"Category with id:{categoryId} doesn't exist in the database");
                 return NotFound();
             }
 
-            var newsForCategory = _repository.News.GetNews(categoryId, id, trackChanges: false);
+            var newsForCategory = await _repository.News.GetNewsAsync(categoryId, id, trackChanges: false);
             if (newsForCategory is null)
             {
                 _logger.LogError($"News with id:{id} doesn't exist in the database");
@@ -108,12 +109,12 @@ namespace CodeMazeSampleProject.Controllers
             }
             
             _repository.News.DeleteNews(newsForCategory);
-            _repository.Save();
+            await _repository.SaveAsync();
             return NoContent();
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateNewsForCategory(Guid categoryId, Guid id,
+        public async Task<IActionResult> UpdateNewsForCategory(Guid categoryId, Guid id,
             [FromBody] NewsForUpdateDto newsForUpdateDto)
         {
             if (newsForUpdateDto is null)
@@ -128,14 +129,14 @@ namespace CodeMazeSampleProject.Controllers
                 return UnprocessableEntity(ModelState);
             }
 
-            var category = _repository.Category.GetCategory(categoryId, trackChanges: false);
+            var category = await _repository.Category.GetCategoryAsync(categoryId, trackChanges: false);
             if (category is null)
             {
                 _logger.LogInfo($"Category with id:{categoryId} doesn't exist in database");
                 return NotFound();
             }
 
-            var news = _repository.News.GetNews(categoryId, id, trackChanges: true);
+            var news = await _repository.News.GetNewsAsync(categoryId, id, trackChanges: true);
             if (news is null)
             {
                 _logger.LogInfo($"News with id: {id} doesn't exist in the database");
@@ -143,12 +144,12 @@ namespace CodeMazeSampleProject.Controllers
             }
 
             _mapper.Map(newsForUpdateDto, news);
-            _repository.Save();
+            await _repository.SaveAsync();
             return NoContent();
         }
 
         [HttpPatch("{id}")]
-        public IActionResult PartiallyUpdateNewsForCategory(Guid categoryId, Guid id,
+        public async Task<IActionResult> PartiallyUpdateNewsForCategory(Guid categoryId, Guid id,
             [FromBody] JsonPatchDocument<NewsForUpdateDto> patchDocument)
         {
             if (patchDocument is null)
@@ -157,14 +158,14 @@ namespace CodeMazeSampleProject.Controllers
                 return BadRequest("patchDocument object is null");
             }
 
-            var category = _repository.Category.GetCategory(categoryId, trackChanges: false);
+            var category = await _repository.Category.GetCategoryAsync(categoryId, trackChanges: false);
             if (category is null)
             {
                 _logger.LogInfo($"Category with id:{categoryId} doesn't exist in the database");
                 return NotFound();
             }
 
-            var news = _repository.News.GetNews(categoryId, id, trackChanges: true);
+            var news = await _repository.News.GetNewsAsync(categoryId, id, trackChanges: true);
             if (news is null)
             {
                 _logger.LogInfo($"News with id:{id} doesn't exist in the database");
@@ -181,7 +182,7 @@ namespace CodeMazeSampleProject.Controllers
             }
             
             _mapper.Map(newsToPatch, news);
-            _repository.Save();
+            await _repository.SaveAsync();
             return NoContent();
         }
     }

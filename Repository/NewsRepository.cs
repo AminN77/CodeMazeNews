@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Contracts;
 using Entities;
 using Entities.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace Repository
 {
@@ -14,13 +16,14 @@ namespace Repository
         {
         }
 
-        public IEnumerable<News> GetNews(Guid categoryId, bool trackChanges) =>
-            FindByCondition(n => n.CategoryId.Equals(categoryId), trackChanges)
-                .OrderBy(n => n.Title);
+        public async Task<IEnumerable<News>> GetNewsAsync(Guid categoryId, bool trackChanges) =>
+            await FindByCondition(n => n.CategoryId.Equals(categoryId), trackChanges)
+                .OrderBy(n => n.Title)
+                .ToListAsync();
 
-        public News GetNews(Guid categoryId, Guid id, bool trackChanges) =>
-            FindByCondition(n => n.CategoryId.Equals(categoryId) && n.Id.Equals(id), trackChanges)
-                .SingleOrDefault();
+        public async Task<News> GetNewsAsync(Guid categoryId, Guid id, bool trackChanges) =>
+            await FindByCondition(n => n.CategoryId.Equals(categoryId) && n.Id.Equals(id), trackChanges)
+                .SingleOrDefaultAsync();
 
         public void CreateNewsForCategory(Guid categoryId, News news)
         {

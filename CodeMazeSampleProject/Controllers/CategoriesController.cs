@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using CodeMazeSampleProject.ActionFilters;
 using CodeMazeSampleProject.ModelBinders;
 using Contracts;
 using Entities;
@@ -49,20 +50,9 @@ namespace CodeMazeSampleProject.Controllers
         }
 
         [HttpPost]
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<IActionResult> CreateCategory([FromBody] CategoryForCreationDto categoryForCreationDto)
         {
-            if (categoryForCreationDto is null)
-            {
-                _logger.LogError("categoryForCreationDto object sent from client is null");
-                return BadRequest("CategoryForCreation object is null");
-            }
-            
-            if (!ModelState.IsValid)
-            {
-                _logger.LogError("Invalid model state for the CategoryForCreationDto object");
-                return UnprocessableEntity(ModelState);
-            }
-
             var category = _mapper.Map<Category>(categoryForCreationDto);
             _repository.Category.CreateCategory(category);
             await _repository.SaveAsync();
@@ -114,15 +104,10 @@ namespace CodeMazeSampleProject.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ServiceFilter(typeof(ValidateCategoryExistsAttribute))]
         public async Task<IActionResult> DeleteCategory(Guid id)
         {
-            var category = await _repository.Category.GetCategoryAsync(id, trackChanges: false);
-            if(category == null)
-            {
-                _logger.LogInfo($"Category with id: {id} doesn't exist in the database.");
-                return NotFound();
-            }
-            
+            var category = HttpContext.Items["category"] as Category;
             _repository.Category.DeleteCategory(category);
             await _repository.SaveAsync();
             return NoContent();
@@ -130,27 +115,11 @@ namespace CodeMazeSampleProject.Controllers
         }
 
         [HttpPut("{id}")]
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
+        [ServiceFilter(typeof(ValidateCategoryExistsAttribute))]
         public async Task<IActionResult> UpdateCategory(Guid id, [FromBody] CategoryForUpdateDto categoryForUpdateDto)
         {
-            if (categoryForUpdateDto is null)
-            {
-                _logger.LogError("CategoryForUpdateDto object sent from client is null");
-                return BadRequest("CategoryForUpdateDto object sent from client is null");
-            }
-            
-            if (!ModelState.IsValid)
-            {
-                _logger.LogError("Invalid model state for the CategoryForUpdateDto object");
-                return UnprocessableEntity(ModelState);
-            }
-
-            var category = await _repository.Category.GetCategoryAsync(id, trackChanges: true);
-            if (category is null)
-            {
-                _logger.LogError($"Category with id:{id} doesn't exist in the database");
-                return NotFound();
-            }
-
+            var category = HttpContext.Items["category"] as Category;
             _mapper.Map(categoryForUpdateDto, category);
             await _repository.SaveAsync();
             return NoContent();

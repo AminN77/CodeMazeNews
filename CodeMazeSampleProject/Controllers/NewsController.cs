@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
+using CodeMazeSampleProject.ActionFilters;
 using Contracts;
 using Entities;
 using Entities.DataTransferObjects;
@@ -62,20 +63,9 @@ namespace CodeMazeSampleProject.Controllers
         }
 
         [HttpPost]
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<IActionResult> CreateNewsForCategory(Guid categoryId, [FromBody] NewsForCreationDto newsForCreationDto)
         {
-            if (newsForCreationDto is null)
-            {
-                _logger.LogError("newsForCreationDto object sent from client is null");
-                return BadRequest("newsForCreationDto object is null");
-            }
-
-            if (!ModelState.IsValid)
-            {
-                _logger.LogError("Invalid model state for the NewsForCreationDto object");
-                return UnprocessableEntity(ModelState);
-            }
-
             var category = await _repository.Category.GetCategoryAsync(categoryId, trackChanges: false);
             if (category is null)
             {
@@ -92,63 +82,29 @@ namespace CodeMazeSampleProject.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ServiceFilter(typeof(ValidateNewsForCategoryExistAttribute))]
         public async Task<IActionResult> DeleteNewsForCategory(Guid categoryId, Guid id)
         {
-            var category = await _repository.Category.GetCategoryAsync(categoryId, trackChanges: false);
-            if (category is null)
-            {
-                _logger.LogInfo($"Category with id:{categoryId} doesn't exist in the database");
-                return NotFound();
-            }
-
-            var newsForCategory = await _repository.News.GetNewsAsync(categoryId, id, trackChanges: false);
-            if (newsForCategory is null)
-            {
-                _logger.LogError($"News with id:{id} doesn't exist in the database");
-                return NotFound();
-            }
-            
+           var newsForCategory = HttpContext.Items["news"] as News;
             _repository.News.DeleteNews(newsForCategory);
             await _repository.SaveAsync();
             return NoContent();
         }
 
         [HttpPut("{id}")]
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
+        [ServiceFilter(typeof(ValidateNewsForCategoryExistAttribute))]
         public async Task<IActionResult> UpdateNewsForCategory(Guid categoryId, Guid id,
             [FromBody] NewsForUpdateDto newsForUpdateDto)
         {
-            if (newsForUpdateDto is null)
-            {
-                _logger.LogError("NewsForUpdateDto object sent from client is null");
-                return BadRequest("NewsForUpdateDto object sent from client is null");
-            }
-            
-            if (!ModelState.IsValid)
-            {
-                _logger.LogError("Invalid model state for the NewsForUpdateDto object");
-                return UnprocessableEntity(ModelState);
-            }
-
-            var category = await _repository.Category.GetCategoryAsync(categoryId, trackChanges: false);
-            if (category is null)
-            {
-                _logger.LogInfo($"Category with id:{categoryId} doesn't exist in database");
-                return NotFound();
-            }
-
-            var news = await _repository.News.GetNewsAsync(categoryId, id, trackChanges: true);
-            if (news is null)
-            {
-                _logger.LogInfo($"News with id: {id} doesn't exist in the database");
-                return NotFound();
-            }
-
+            var news = HttpContext.Items["news"] as News;
             _mapper.Map(newsForUpdateDto, news);
             await _repository.SaveAsync();
             return NoContent();
         }
 
         [HttpPatch("{id}")]
+        [ServiceFilter(typeof(ValidateNewsForCategoryExistAttribute))]
         public async Task<IActionResult> PartiallyUpdateNewsForCategory(Guid categoryId, Guid id,
             [FromBody] JsonPatchDocument<NewsForUpdateDto> patchDocument)
         {
@@ -158,20 +114,7 @@ namespace CodeMazeSampleProject.Controllers
                 return BadRequest("patchDocument object is null");
             }
 
-            var category = await _repository.Category.GetCategoryAsync(categoryId, trackChanges: false);
-            if (category is null)
-            {
-                _logger.LogInfo($"Category with id:{categoryId} doesn't exist in the database");
-                return NotFound();
-            }
-
-            var news = await _repository.News.GetNewsAsync(categoryId, id, trackChanges: true);
-            if (news is null)
-            {
-                _logger.LogInfo($"News with id:{id} doesn't exist in the database");
-                return NotFound();
-            }
-
+            var news = HttpContext.Items["news"] as News;
             var newsToPatch = _mapper.Map<NewsForUpdateDto>(news);
             patchDocument.ApplyTo(newsToPatch, ModelState);
             TryValidateModel(newsToPatch);

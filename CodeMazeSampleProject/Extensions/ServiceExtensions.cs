@@ -1,4 +1,5 @@
-﻿using Contracts;
+﻿using CodeMazeSampleProject.ActionFilters;
+using Contracts;
 using Entities.Context;
 using LoggerService;
 using Microsoft.EntityFrameworkCore;
@@ -36,5 +37,13 @@ namespace CodeMazeSampleProject.Extensions
 
         public static IMvcBuilder AddCustomCsvFormatter(this IMvcBuilder builder) =>
             builder.AddMvcOptions(config => config.OutputFormatters.Add(new CsvOutputFormatter()));
+
+        public static void AddCustomServiceFilters(this IServiceCollection services)
+        {
+            services.AddScoped<ValidateNewsForCategoryExistAttribute>();
+            services.AddScoped<ValidateCategoryExistsAttribute>();
+            services.AddScoped<ValidationFilterAttribute>();
+        }
+         
     }
 }

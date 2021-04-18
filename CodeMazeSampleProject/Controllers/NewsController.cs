@@ -6,8 +6,10 @@ using CodeMazeSampleProject.ActionFilters;
 using Contracts;
 using Entities;
 using Entities.DataTransferObjects;
+using Entities.RequestFeatures;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace CodeMazeSampleProject.Controllers
 {
@@ -27,7 +29,7 @@ namespace CodeMazeSampleProject.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetNewsForCategory(Guid categoryId)
+        public async Task<IActionResult> GetNewsForCategory(Guid categoryId, [FromQuery] NewsParameters newsParameters)
         {
             var category = await _repository.Category.GetCategoryAsync(categoryId, trackChanges: false);
             if (category is null)
@@ -36,7 +38,10 @@ namespace CodeMazeSampleProject.Controllers
                 return NotFound();
             }
 
-            var newsFromDb = await _repository.News.GetNewsAsync(categoryId, trackChanges: false);
+            var newsFromDb = await _repository.News.GetNewsAsync(categoryId, 
+               newsParameters , trackChanges: false);
+            Response.Headers.Add("X-Pagination",
+                JsonConvert.SerializeObject(newsFromDb.MetaData));
             var newsDto = _mapper.Map<IEnumerable<NewsDto>>(newsFromDb);
             return Ok(newsDto);
         }

@@ -7,6 +7,7 @@ using Entities;
 using Entities.Context;
 using Entities.RequestFeatures;
 using Microsoft.EntityFrameworkCore;
+using Repository.Extensions;
 
 namespace Repository
 {
@@ -21,6 +22,7 @@ namespace Repository
             bool trackChanges)
         {
           var newsList =  await FindByCondition(n => n.CategoryId.Equals(categoryId), trackChanges)
+                .Search(newsParameters.SearchTerm)
                 .OrderBy(n => n.Title)
                 .ToListAsync();
 

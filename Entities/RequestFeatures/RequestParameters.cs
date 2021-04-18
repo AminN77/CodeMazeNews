@@ -14,5 +14,6 @@
 
     public class NewsParameters : RequestParameters
     {
+        public string SearchTerm { get; set; }
     }
 }

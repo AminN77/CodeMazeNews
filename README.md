@@ -6,3 +6,4 @@ a simple ASP.NET core WebAPI application using :
 ### Additional content negotiations (XML, CSV)
 ### Validation
 ### Asynchronous programming
+### Custom Action filters

@@ -7,4 +7,5 @@ a simple ASP.NET core WebAPI application using :
 ### Validation
 ### Asynchronous programming
 ### Custom Action filters
+### Paginating & Sorting
 ### Filtering & Simple searching

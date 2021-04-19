@@ -23,6 +23,7 @@ namespace Repository
         {
           var newsList =  await FindByCondition(n => n.CategoryId.Equals(categoryId), trackChanges)
                 .Search(newsParameters.SearchTerm)
+                .Sort(newsParameters.OrderBy)
                 .OrderBy(n => n.Title)
                 .ToListAsync();
 

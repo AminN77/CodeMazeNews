@@ -20,16 +20,18 @@ namespace CodeMazeSampleProject.Controllers
         private readonly IRepositoryManager _repository;
         private readonly ILoggerManager _logger;
         private readonly IMapper _mapper;
+        private readonly IDataShaper<NewsDto> _dataShaper;
 
-        public NewsController(IRepositoryManager repository, ILoggerManager logger, IMapper mapper)
+        public NewsController(IRepositoryManager repository, ILoggerManager logger, IMapper mapper, IDataShaper<NewsDto> dataShaper)
         {
             _repository = repository;
             _logger = logger;
             _mapper = mapper;
+            _dataShaper = dataShaper;
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetNewsForCategory(Guid categoryId, [FromQuery] NewsParameters newsParameters)
+        public async Task<IActionResult> GetAllNewsForCategory(Guid categoryId, [FromQuery] NewsParameters newsParameters)
         {
             var category = await _repository.Category.GetCategoryAsync(categoryId, trackChanges: false);
             if (category is null)
@@ -43,7 +45,7 @@ namespace CodeMazeSampleProject.Controllers
             Response.Headers.Add("X-Pagination",
                 JsonConvert.SerializeObject(newsFromDb.MetaData));
             var newsDto = _mapper.Map<IEnumerable<NewsDto>>(newsFromDb);
-            return Ok(newsDto);
+            return Ok(_dataShaper.ShapeData(newsDto, newsParameters.Fields));
         }
 
         [HttpGet("{id}", Name = "GetNewsForCategory")]

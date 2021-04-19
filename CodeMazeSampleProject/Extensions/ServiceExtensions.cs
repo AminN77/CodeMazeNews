@@ -1,12 +1,14 @@
 ﻿using CodeMazeSampleProject.ActionFilters;
 using Contracts;
 using Entities.Context;
+using Entities.DataTransferObjects;
 using LoggerService;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Repository;
+using Repository.DataShaping;
 
 namespace CodeMazeSampleProject.Extensions
 {
@@ -43,6 +45,11 @@ namespace CodeMazeSampleProject.Extensions
             services.AddScoped<ValidateNewsForCategoryExistAttribute>();
             services.AddScoped<ValidateCategoryExistsAttribute>();
             services.AddScoped<ValidationFilterAttribute>();
+        }
+
+        public static void AddDataShaping(this IServiceCollection services)
+        {
+            services.AddScoped<IDataShaper<NewsDto>, DataShaper<NewsDto>>();
         }
          
     }

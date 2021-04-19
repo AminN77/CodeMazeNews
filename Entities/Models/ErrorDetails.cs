@@ -1,7 +1,6 @@
-﻿using System.Text.Json.Serialization;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
-namespace Entities
+namespace Entities.Models
 {
     public class ErrorDetails
     {

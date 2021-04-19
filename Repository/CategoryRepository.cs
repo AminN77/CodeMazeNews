@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Contracts;
 using Entities;
 using Entities.Context;
+using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Repository

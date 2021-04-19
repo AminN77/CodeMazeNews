@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using CodeMazeSampleProject.ActionFilters;
+using CodeMazeSampleProject.Utilities;
 using Contracts;
 using Entities;
 using Entities.DataTransferObjects;
+using Entities.Models;
 using Entities.RequestFeatures;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -21,16 +23,19 @@ namespace CodeMazeSampleProject.Controllers
         private readonly ILoggerManager _logger;
         private readonly IMapper _mapper;
         private readonly IDataShaper<NewsDto> _dataShaper;
+        private readonly NewsLinks _newsLinks;
 
-        public NewsController(IRepositoryManager repository, ILoggerManager logger, IMapper mapper, IDataShaper<NewsDto> dataShaper)
+        public NewsController(IRepositoryManager repository, ILoggerManager logger, IMapper mapper, IDataShaper<NewsDto> dataShaper, NewsLinks newsLinks)
         {
             _repository = repository;
             _logger = logger;
             _mapper = mapper;
             _dataShaper = dataShaper;
+            _newsLinks = newsLinks;
         }
 
         [HttpGet]
+        [ServiceFilter(typeof(ValidateMediaTypeAttribute))]
         public async Task<IActionResult> GetAllNewsForCategory(Guid categoryId, [FromQuery] NewsParameters newsParameters)
         {
             var category = await _repository.Category.GetCategoryAsync(categoryId, trackChanges: false);
@@ -45,7 +50,8 @@ namespace CodeMazeSampleProject.Controllers
             Response.Headers.Add("X-Pagination",
                 JsonConvert.SerializeObject(newsFromDb.MetaData));
             var newsDto = _mapper.Map<IEnumerable<NewsDto>>(newsFromDb);
-            return Ok(_dataShaper.ShapeData(newsDto, newsParameters.Fields));
+            var links = _newsLinks.TryGenerateLinks(newsDto, newsParameters.Fields, categoryId, HttpContext);
+            return links.HasLinks ? Ok(links.LinkedEntities) : Ok(links.ShapedEntities);
         }
 
         [HttpGet("{id}", Name = "GetNewsForCategory")]

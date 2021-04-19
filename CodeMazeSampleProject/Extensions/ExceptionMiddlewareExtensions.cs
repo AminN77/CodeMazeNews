@@ -1,6 +1,7 @@
 ﻿using System.Net;
 using Contracts;
 using Entities;
+using Entities.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;

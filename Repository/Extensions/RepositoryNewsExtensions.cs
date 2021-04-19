@@ -4,6 +4,7 @@ using System.Linq.Dynamic.Core;
 using System.Reflection;
 using System.Text;
 using Entities;
+using Entities.Models;
 using Repository.Extensions.Utility;
 
 namespace Repository.Extensions

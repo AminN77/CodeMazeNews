@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Entities;
 using Entities.DataTransferObjects;
+using Entities.Models;
 
 namespace CodeMazeSampleProject
 {

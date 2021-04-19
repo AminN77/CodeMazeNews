@@ -8,6 +8,7 @@ using CodeMazeSampleProject.ModelBinders;
 using Contracts;
 using Entities;
 using Entities.DataTransferObjects;
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CodeMazeSampleProject.Controllers

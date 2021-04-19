@@ -1,6 +1,6 @@
 ﻿using Entities.Configuration;
+using Entities.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace Entities.Context
 {

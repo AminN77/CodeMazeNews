@@ -10,3 +10,4 @@ a simple ASP.NET core WebAPI application using :
 ### Paginating & Sorting
 ### Filtering & Simple searching
 ### Data shaping
+### HATEOAS

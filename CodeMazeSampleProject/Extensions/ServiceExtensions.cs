@@ -67,7 +67,7 @@ namespace CodeMazeSampleProject.Extensions
                 {
                     newtonsoftJsonOutputFormatter
                         .SupportedMediaTypes
-                        .Add("application/vnd.News.hateoas+json");
+                        .Add("application/vnd.codemaze.hateoas+json");
                 }
 
                 var xmlOutputFormatter = config.OutputFormatters
@@ -76,7 +76,7 @@ namespace CodeMazeSampleProject.Extensions
                 {
                     xmlOutputFormatter
                         .SupportedMediaTypes
-                        .Add("application/vnd.News.hateoas+xml");
+                        .Add("application/vnd.codemaze.hateoas+xml");
                 }
             });
         }

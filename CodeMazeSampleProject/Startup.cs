@@ -35,7 +35,7 @@ namespace CodeMazeSampleProject
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCustomMediaTypes();
+            services.AddHateoas();
             services.AddDataShaping();
             services.AddCustomServiceFilters();
             services.Configure<ApiBehaviorOptions>(options =>
@@ -51,9 +51,11 @@ namespace CodeMazeSampleProject
                 {
                     config.RespectBrowserAcceptHeader = true;
                     config.ReturnHttpNotAcceptable = true;
-                }).AddNewtonsoftJson()
+                })
+                .AddNewtonsoftJson()
                 .AddXmlSerializerFormatters()
                 .AddCustomCsvFormatter();
+            services.AddCustomMediaTypes();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CodeMazeSampleProject", Version = "v1" });

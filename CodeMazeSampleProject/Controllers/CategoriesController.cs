@@ -6,7 +6,6 @@ using AutoMapper;
 using CodeMazeSampleProject.ActionFilters;
 using CodeMazeSampleProject.ModelBinders;
 using Contracts;
-using Entities;
 using Entities.DataTransferObjects;
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -124,6 +123,13 @@ namespace CodeMazeSampleProject.Controllers
             _mapper.Map(categoryForUpdateDto, category);
             await _repository.SaveAsync();
             return NoContent();
+        }
+
+        [HttpOptions]
+        public IActionResult GetCategoriesOptions()
+        {
+            Response.Headers.Add("Allow", "GET, OPTIONS, POST");
+            return Ok();
         }
     }
 }

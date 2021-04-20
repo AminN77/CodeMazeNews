@@ -13,3 +13,18 @@ E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Entities\obj\De
 E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Entities\obj\Debug\net5.0\ref\Entities.dll
 E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Entities\obj\Debug\net5.0\Entities.pdb
 E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Entities\obj\Debug\net5.0\Entities.genruntimeconfig.cache
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Entities\bin\Debug\net5.0\Entities.deps.json
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Entities\bin\Debug\net5.0\Entities.runtimeconfig.json
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Entities\bin\Debug\net5.0\Entities.runtimeconfig.dev.json
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Entities\bin\Debug\net5.0\Entities.dll
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Entities\bin\Debug\net5.0\ref\Entities.dll
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Entities\bin\Debug\net5.0\Entities.pdb
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Entities\obj\Debug\net5.0\Entities.csprojAssemblyReference.cache
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.cache
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Entities\obj\Debug\net5.0\Entities.dll
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Entities\obj\Debug\net5.0\ref\Entities.dll
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Entities\obj\Debug\net5.0\Entities.pdb
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Entities\obj\Debug\net5.0\Entities.genruntimeconfig.cache

@@ -157,6 +157,7 @@ namespace Entities.Models
 			return GetEnumerator();
 		}
 		
+		
 		private void WriteLinksToXml(string key, object value, XmlWriter writer)
 		{
 			writer.WriteStartElement(key);

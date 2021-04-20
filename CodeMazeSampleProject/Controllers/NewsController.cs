@@ -35,6 +35,7 @@ namespace CodeMazeSampleProject.Controllers
         }
 
         [HttpGet]
+        [HttpHead]
         [ServiceFilter(typeof(ValidateMediaTypeAttribute))]
         public async Task<IActionResult> GetAllNewsForCategory(Guid categoryId, [FromQuery] NewsParameters newsParameters)
         {

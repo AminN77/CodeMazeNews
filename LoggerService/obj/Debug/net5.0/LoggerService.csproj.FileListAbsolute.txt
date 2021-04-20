@@ -15,3 +15,20 @@ E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\o
 E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\obj\Debug\net5.0\LoggerService.pdb
 E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\bin\Debug\net5.0\Entities.dll
 E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\LoggerService\bin\Debug\net5.0\Entities.pdb
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\LoggerService\bin\Debug\net5.0\LoggerService.deps.json
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\LoggerService\bin\Debug\net5.0\LoggerService.dll
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\LoggerService\bin\Debug\net5.0\ref\LoggerService.dll
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\LoggerService\bin\Debug\net5.0\LoggerService.pdb
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\LoggerService\bin\Debug\net5.0\Contracts.dll
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\LoggerService\bin\Debug\net5.0\Entities.dll
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\LoggerService\bin\Debug\net5.0\Contracts.pdb
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\LoggerService\bin\Debug\net5.0\Entities.pdb
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\LoggerService\obj\Debug\net5.0\LoggerService.csprojAssemblyReference.cache
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\LoggerService\obj\Debug\net5.0\LoggerService.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\LoggerService\obj\Debug\net5.0\LoggerService.AssemblyInfoInputs.cache
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\LoggerService\obj\Debug\net5.0\LoggerService.AssemblyInfo.cs
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\LoggerService\obj\Debug\net5.0\LoggerService.csproj.CoreCompileInputs.cache
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\LoggerService\obj\Debug\net5.0\LoggerService.csproj.CopyComplete
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\LoggerService\obj\Debug\net5.0\LoggerService.dll
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\LoggerService\obj\Debug\net5.0\ref\LoggerService.dll
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\LoggerService\obj\Debug\net5.0\LoggerService.pdb

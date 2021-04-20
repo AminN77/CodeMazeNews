@@ -13,3 +13,18 @@ E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\obj\D
 E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\bin\Debug\net5.0\Entities.dll
 E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\bin\Debug\net5.0\Entities.pdb
 E:\Projects\Web\BackEnd\Asp.Net core\Tests\CodeMazeSampleProject\Contracts\obj\Debug\net5.0\Contracts.csproj.CopyComplete
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Contracts\bin\Debug\net5.0\Contracts.deps.json
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Contracts\bin\Debug\net5.0\Contracts.dll
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Contracts\bin\Debug\net5.0\ref\Contracts.dll
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Contracts\bin\Debug\net5.0\Contracts.pdb
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Contracts\bin\Debug\net5.0\Entities.dll
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Contracts\bin\Debug\net5.0\Entities.pdb
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Contracts\obj\Debug\net5.0\Contracts.csprojAssemblyReference.cache
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Contracts\obj\Debug\net5.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Contracts\obj\Debug\net5.0\Contracts.AssemblyInfoInputs.cache
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Contracts\obj\Debug\net5.0\Contracts.AssemblyInfo.cs
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Contracts\obj\Debug\net5.0\Contracts.csproj.CoreCompileInputs.cache
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Contracts\obj\Debug\net5.0\Contracts.csproj.CopyComplete
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Contracts\obj\Debug\net5.0\Contracts.dll
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Contracts\obj\Debug\net5.0\ref\Contracts.dll
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\Contracts\obj\Debug\net5.0\Contracts.pdb

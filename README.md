@@ -2,7 +2,7 @@
 a simple ASP.NET core WebAPI application using :
 ### NLog
 ### Repository Pattern
-### RESTful APIs
+### RESTful APIs(GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
 ### Additional content negotiations (XML, CSV)
 ### Validation
 ### Asynchronous programming

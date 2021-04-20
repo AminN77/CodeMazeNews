@@ -7,6 +7,7 @@ using Entities.DataTransferObjects;
 using LoggerService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -68,6 +69,9 @@ namespace CodeMazeSampleProject.Extensions
                     newtonsoftJsonOutputFormatter
                         .SupportedMediaTypes
                         .Add("application/vnd.codemaze.hateoas+json");
+                    newtonsoftJsonOutputFormatter
+                        .SupportedMediaTypes
+                        .Add("application/vnd.codemaze.apiroot+json");
                 }
 
                 var xmlOutputFormatter = config.OutputFormatters
@@ -77,6 +81,9 @@ namespace CodeMazeSampleProject.Extensions
                     xmlOutputFormatter
                         .SupportedMediaTypes
                         .Add("application/vnd.codemaze.hateoas+xml");
+                    xmlOutputFormatter
+                        .SupportedMediaTypes
+                        .Add("application/vnd.codemaze.apiroot+xml");
                 }
             });
         }
@@ -84,6 +91,17 @@ namespace CodeMazeSampleProject.Extensions
         public static void AddHateoas(this IServiceCollection services)
         {
             services.AddScoped<NewsLinks>();
+        }
+
+        public static void ConfigureVersioning(this IServiceCollection services)
+        {
+            services.AddApiVersioning(opt =>
+            {
+                opt.ReportApiVersions = true;
+                opt.AssumeDefaultVersionWhenUnspecified = true;
+                opt.DefaultApiVersion = new ApiVersion(1, 0);
+                // For header versioning : opt.ApiVersionReader = new HeaderApiVersionReader("api-version");
+            });
         }
          
     }

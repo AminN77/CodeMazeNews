@@ -12,6 +12,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CodeMazeSampleProject.Controllers
 {
+    [ApiVersion("1.0")]
+    // For Deprecated versions : [ApiVersion("1.0", Deprecated = true)]
+    // For URI versioning : [Route("api/{v:apiversion}/categories")]
     [Route("api/categories")]
     [ApiController]
     public class CategoriesController : ControllerBase
@@ -27,7 +30,7 @@ namespace CodeMazeSampleProject.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]
+        [HttpGet(Name = "GetCategories")]
         public async Task<IActionResult> GetCategories()
         {
             var categories = await _repository.Category.GetAllCategoriesAsync(trackChanges: false);
@@ -49,7 +52,7 @@ namespace CodeMazeSampleProject.Controllers
             return Ok(categoryDto);
         }
 
-        [HttpPost]
+        [HttpPost(Name = "CreateCategory")]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<IActionResult> CreateCategory([FromBody] CategoryForCreationDto categoryForCreationDto)
         {

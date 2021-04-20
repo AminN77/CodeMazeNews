@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "g9oEJrRGl1i5vOcgeyGasm8GaF32KKVAn+ZvP9eya1hBzGGPKLBA0ZKVqqN/JvG/tqJFMGVp0pk7D9AidsZ4ng==",
+  "dgSpecHash": "UPYMT+OyMAAKZX8C3a2+dJ4DgAfgQo7LYmgARmcuNxBFaEVEAhKBQK+XhmL6iYb8YJvl/V9HowN9OythynWPyA==",
   "success": true,
   "projectFilePath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\CodeMazeSampleProject\\CodeMazeSampleProject.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\Amin N\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.0-preview.3.21201.13\\microsoft.aspnetcore.jsonpatch.6.0.0-preview.3.21201.13.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.5\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.5.nupkg.sha512",
+    "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.1\\microsoft.data.sqlclient.2.1.1.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

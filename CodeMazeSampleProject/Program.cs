@@ -11,6 +11,7 @@ namespace CodeMazeSampleProject
 {
     public class Program
     {
+        //TODO : XmlWriter (Entities/Models/Entity) doesn't work properly
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();

@@ -11,5 +11,5 @@ a simple ASP.NET core WebAPI application using :
 ### Filtering & Simple searching
 ### Data shaping
 ### HATEOAS
-### Root Document
+### Root document
 ### API versioning

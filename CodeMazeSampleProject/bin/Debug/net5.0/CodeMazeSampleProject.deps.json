@@ -25,6 +25,7 @@
     ".NETCoreApp,Version=v5.0": {
       "CodeMazeSampleProject/1.0.0": {
         "dependencies": {
+          "AspNetCoreRateLimit": "3.2.2",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
           "LoggerService": "1.0.0",
           "Marvin.Cache.Headers": "4.1.0",
@@ -313,6 +314,23 @@
           "CodeMazeSampleProject.dll": {}
         }
       },
+      "AspNetCoreRateLimit/3.2.2": {
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "6.0.0-preview.2.21154.6",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0-preview.2.21154.6",
+          "Microsoft.Extensions.Options": "6.0.0-preview.2.21154.6",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "lib/net5.0/AspNetCoreRateLimit.dll": {
+            "assemblyVersion": "3.2.2.0",
+            "fileVersion": "3.2.2.0"
+          }
+        },
+        "compile": {
+          "lib/net5.0/AspNetCoreRateLimit.dll": {}
+        }
+      },
       "AutoMapper/10.1.1": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
@@ -385,7 +403,7 @@
       "Microsoft.AspNetCore.JsonPatch/6.0.0-preview.3.21201.13": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
-          "Newtonsoft.Json": "12.0.2"
+          "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll": {
@@ -406,7 +424,7 @@
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson/5.0.5": {
         "dependencies": {
           "Microsoft.AspNetCore.JsonPatch": "6.0.0-preview.3.21201.13",
-          "Newtonsoft.Json": "12.0.2",
+          "Newtonsoft.Json": "12.0.3",
           "Newtonsoft.Json.Bson": "1.0.2"
         },
         "runtime": {
@@ -810,11 +828,11 @@
           "Microsoft.NETCore.Platforms": "3.1.0"
         }
       },
-      "Newtonsoft.Json/12.0.2": {
+      "Newtonsoft.Json/12.0.3": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
             "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.0.2.23222"
+            "fileVersion": "12.0.3.23909"
           }
         },
         "compile": {
@@ -823,7 +841,7 @@
       },
       "Newtonsoft.Json.Bson/1.0.2": {
         "dependencies": {
-          "Newtonsoft.Json": "12.0.2"
+          "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {
@@ -1080,7 +1098,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.0-preview.2.21154.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0-preview.2.21154.2",
-          "Newtonsoft.Json": "12.0.2"
+          "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "Entities.dll": {}
@@ -2742,6 +2760,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AspNetCoreRateLimit/3.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ayEDHsR0d+c1UZx3c8EjmEw+WCskTjhAyAz4BF3eB2AyRJRzhIHiWbFwJ/hTUmwNs8kt0VigyKnwPonfnmR1JQ==",
+      "path": "aspnetcoreratelimit/3.2.2",
+      "hashPath": "aspnetcoreratelimit.3.2.2.nupkg.sha512"
+    },
     "AutoMapper/10.1.1": {
       "type": "package",
       "serviceable": true,
@@ -3029,12 +3054,12 @@
       "path": "microsoft.win32.systemevents/4.7.0",
       "hashPath": "microsoft.win32.systemevents.4.7.0.nupkg.sha512"
     },
-    "Newtonsoft.Json/12.0.2": {
+    "Newtonsoft.Json/12.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
-      "path": "newtonsoft.json/12.0.2",
-      "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
     },
     "Newtonsoft.Json.Bson/1.0.2": {
       "type": "package",

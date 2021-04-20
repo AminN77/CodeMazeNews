@@ -168,3 +168,4 @@ E:\Projects\WebApp\CodeMaze\CodeMazeNews\CodeMazeSampleProject\obj\Debug\net5.0\
 E:\Projects\WebApp\CodeMaze\CodeMazeNews\CodeMazeSampleProject\obj\Debug\net5.0\CodeMazeSampleProject.genruntimeconfig.cache
 E:\Projects\WebApp\CodeMaze\CodeMazeNews\CodeMazeSampleProject\bin\Debug\net5.0\Marvin.Cache.Headers.dll
 E:\Projects\WebApp\CodeMaze\CodeMazeNews\CodeMazeSampleProject\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+E:\Projects\WebApp\CodeMaze\CodeMazeNews\CodeMazeSampleProject\bin\Debug\net5.0\AspNetCoreRateLimit.dll

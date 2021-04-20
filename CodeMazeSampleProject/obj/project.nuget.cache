@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "h2ka53WybQZWPewS6pgApVA8LvA+VNRuIv1mr5JKEPxeJdVAhfzC5/Rxw1l01RPutuidlOfc5wd1UxBYgQGUfg==",
+  "dgSpecHash": "RWqRsYD48R35MeCRZ6FMJBCJDKx0TR1qa376MVdejvXOJ2lZguJ8lSlDPqwqBzsmOh6/IMU5EU/geq3FLgGf5g==",
   "success": true,
   "projectFilePath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\CodeMazeSampleProject\\CodeMazeSampleProject.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Amin N\\.nuget\\packages\\aspnetcoreratelimit\\3.2.2\\aspnetcoreratelimit.3.2.2.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
@@ -45,7 +46,7 @@
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "C:\\Users\\Amin N\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\Amin N\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\nlog\\4.7.8\\nlog.4.7.8.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\nlog.extensions.logging\\1.7.1\\nlog.extensions.logging.1.7.1.nupkg.sha512",

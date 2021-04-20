@@ -12,7 +12,7 @@ namespace CodeMazeSampleProject
     public class Program
     {
         //TODO : XmlWriter (Entities/Models/Entity) doesn't work properly
-        //TODO : Caching system is not a correct state and validation caching has bugs, use Varnish, Apache Traffic Server or Squid
+        //TODO : Caching system is not in a correct state and validation caching has bugs, use Varnish, Apache Traffic Server or Squid
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();

@@ -13,3 +13,4 @@ a simple ASP.NET core WebAPI application using :
 ### HATEOAS
 ### Root document
 ### API versioning
+### Caching

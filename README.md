@@ -14,3 +14,4 @@ a simple ASP.NET core WebAPI application using :
 ### Root document
 ### API versioning
 ### Caching
+### Rate limiting & Throttling

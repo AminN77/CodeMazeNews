@@ -15,3 +15,5 @@ a simple ASP.NET core WebAPI application using :
 ### API versioning
 ### Caching
 ### Rate limiting & Throttling
+### JWT & Identity
+### Swagger documentation

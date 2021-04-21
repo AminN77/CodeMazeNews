@@ -15,6 +15,7 @@ namespace CodeMazeSampleProject
             CreateMap<NewsForCreationDto, News>();
             CreateMap<NewsForUpdateDto, News>().ReverseMap();
             CreateMap<CategoryForUpdateDto, Category>();
+            CreateMap<UserForRegistrationDto, User>();
         }
     }
 }

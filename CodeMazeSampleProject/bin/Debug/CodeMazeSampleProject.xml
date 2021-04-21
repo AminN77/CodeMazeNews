@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeMazeSampleProject</name>
+    </assembly>
+    <members>
+        <member name="M:CodeMazeSampleProject.Controllers.CategoriesController.GetCategories">
+            <summary>
+            Gets the list of all categories
+            </summary>
+            <returns>The categories list</returns>
+        </member>
+        <member name="M:CodeMazeSampleProject.Controllers.CategoriesController.CreateCategory(Entities.DataTransferObjects.CategoryForCreationDto)">
+            <summary>
+            Creates a new category
+            </summary>
+            <param name="categoryForCreationDto"></param>
+            <returns code="201">Returns the newly created item</returns>
+            <returns code="400">If the item is null</returns>
+            <returns code="422">If the model is invalid</returns>
+        </member>
+    </members>
+</doc>

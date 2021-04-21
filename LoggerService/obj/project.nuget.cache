@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "gDSritgOkvimixeyvHWbh/syQ+p1rhoL5oWluJf2ldQT/IKrNPR9xhTCFQ12TKal394DA1wNGuBd4ubiyvV82A==",
+  "dgSpecHash": "R8MUj6eocIzIVZLpOAPiXPv50DYc4MJtejAI6VUu1UmfyENrLsHfVNpw4s9mFkH0YgaXVdU//KOu8NKxAJs8RQ==",
   "success": true,
   "projectFilePath": "E:\\Projects\\WebApp\\CodeMaze\\CodeMazeNews\\LoggerService\\LoggerService.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.5\\microsoft.aspnetcore.cryptography.internal.5.0.5.nupkg.sha512",
+    "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.5\\microsoft.aspnetcore.cryptography.keyderivation.5.0.5.nupkg.sha512",
+    "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\5.0.5\\microsoft.aspnetcore.identity.entityframeworkcore.5.0.5.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.1\\microsoft.data.sqlclient.2.1.1.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
@@ -17,6 +20,8 @@
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0-preview.2.21154.6\\microsoft.extensions.configuration.abstractions.6.0.0-preview.2.21154.6.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0-preview.2.21154.6\\microsoft.extensions.dependencyinjection.6.0.0-preview.2.21154.6.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0-preview.2.21154.6\\microsoft.extensions.dependencyinjection.abstractions.6.0.0-preview.2.21154.6.nupkg.sha512",
+    "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.extensions.identity.core\\5.0.5\\microsoft.extensions.identity.core.5.0.5.nupkg.sha512",
+    "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.extensions.identity.stores\\5.0.5\\microsoft.extensions.identity.stores.5.0.5.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0-preview.2.21154.6\\microsoft.extensions.logging.6.0.0-preview.2.21154.6.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0-preview.2.21154.6\\microsoft.extensions.logging.abstractions.6.0.0-preview.2.21154.6.nupkg.sha512",
     "C:\\Users\\Amin N\\.nuget\\packages\\microsoft.extensions.options\\6.0.0-preview.2.21154.6\\microsoft.extensions.options.6.0.0-preview.2.21154.6.nupkg.sha512",

@@ -8,6 +8,7 @@ using CodeMazeSampleProject.ModelBinders;
 using Contracts;
 using Entities.DataTransferObjects;
 using Entities.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CodeMazeSampleProject.Controllers
@@ -30,7 +31,11 @@ namespace CodeMazeSampleProject.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet(Name = "GetCategories")]
+        /// <summary>
+        /// Gets the list of all categories
+        /// </summary>
+        /// <returns>The categories list</returns>
+        [HttpGet(Name = "GetCategories"), Authorize(Roles = "Manager")]
         public async Task<IActionResult> GetCategories()
         {
             var categories = await _repository.Category.GetAllCategoriesAsync(trackChanges: false);
@@ -52,8 +57,18 @@ namespace CodeMazeSampleProject.Controllers
             return Ok(categoryDto);
         }
 
+        /// <summary>
+        /// Creates a new category
+        /// </summary>
+        /// <param name="categoryForCreationDto"></param>
+        /// <returns code="201">Returns the newly created item</returns>
+        /// <returns code="400">If the item is null</returns>
+        /// <returns code="422">If the model is invalid</returns>
         [HttpPost(Name = "CreateCategory")]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(422)]
         public async Task<IActionResult> CreateCategory([FromBody] CategoryForCreationDto categoryForCreationDto)
         {
             var category = _mapper.Map<Category>(categoryForCreationDto);

@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using AspNetCoreRateLimit;
 using CodeMazeSampleProject.ActionFilters;
 using CodeMazeSampleProject.Extensions;
+using CodeMazeSampleProject.Utilities;
 using Contracts;
 using LoggerService;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -36,6 +37,11 @@ namespace CodeMazeSampleProject
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.ConfigureSwagger();
+            services.AddScoped<IAuthenticationManager, AuthenticationManager>();
+            services.AddAuthentication();
+            services.ConfigureIdentity();
+            services.ConfigureJwt(Configuration);
             services.AddMemoryCache();
             services.ConfigureRateLimitingOptions();
             services.AddHttpContextAccessor();
@@ -67,10 +73,6 @@ namespace CodeMazeSampleProject
                 .AddXmlSerializerFormatters()
                 .AddCustomCsvFormatter();
             services.AddCustomMediaTypes();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "CodeMazeSampleProject", Version = "v1" });
-            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -80,7 +82,11 @@ namespace CodeMazeSampleProject
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CodeMazeSampleProject v1"));
+                app.UseSwaggerUI(s =>
+                {
+                       s.SwaggerEndpoint("/swagger/v1/swagger.json", "Code Maze API v1");
+                       s.SwaggerEndpoint("/swagger/v2/swagger.json", "Code Maze API v2");
+                });
             }
             
             app.ConfigureExceptionHandler(logger);
@@ -97,7 +103,7 @@ namespace CodeMazeSampleProject
             app.UseHttpCacheHeaders();
             app.UseIpRateLimiting();
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

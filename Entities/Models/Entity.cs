@@ -161,6 +161,13 @@ namespace Entities.Models
 		private void WriteLinksToXml(string key, object value, XmlWriter writer)
 		{
 			writer.WriteStartElement(key);
+			if (value is null)
+			{
+				writer.WriteString(null);
+				writer.WriteEndElement();
+				return;
+			}
+			
 			if (value.GetType() == typeof(List<Link>))
 			{
 				foreach (var val in value as List<Link>)

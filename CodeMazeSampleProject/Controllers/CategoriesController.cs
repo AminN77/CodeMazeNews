@@ -35,7 +35,7 @@ namespace CodeMazeSampleProject.Controllers
         /// Gets the list of all categories
         /// </summary>
         /// <returns>The categories list</returns>
-        [HttpGet(Name = "GetCategories"), Authorize(Roles = "Manager")]
+        [HttpGet(Name = "GetCategories")/*, Authorize(Roles = "Manager")*/]
         public async Task<IActionResult> GetCategories()
         {
             var categories = await _repository.Category.GetAllCategoriesAsync(trackChanges: false);
